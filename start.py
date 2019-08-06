@@ -5,7 +5,7 @@ print('Please enter the path')
 path=input('Path:')
 for root, dirs, files in os.walk(path):
     for file in files:
-        if file.endswith('flac'):
+        if file.endswith('flac') or file.endswith('wav'):
             target_path=os.path.join(root, file)
             target_folder=os.path.dirname(target_path)
             target_base= os.path.basename(target_path)
